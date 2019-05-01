@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanbanBoard.BLL", "KanbanBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanbanBoard.DAL", "KanbanBoard.DAL\KanbanBoard.DAL.csproj", "{7F1DE210-484A-42CE-801F-F28ADC856CE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanbanBoard.DTO", "KanbanBoard.DTO\KanbanBoard.DTO.csproj", "{9F53D451-6001-449A-A3E8-DEB5A6832C9D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanbanBoard.Model", "KanbanBoard.Model\KanbanBoard.Model.csproj", "{7D9447DA-6083-4EBD-9BAB-918E54A0722F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanbanBoard.CustomException", "KanbanBoard.CustomException\KanbanBoard.CustomException.csproj", "{6173A7E3-4CFA-4F9B-98D3-05494655E77B}"
@@ -29,10 +27,6 @@ Global
 		{7F1DE210-484A-42CE-801F-F28ADC856CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F1DE210-484A-42CE-801F-F28ADC856CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F1DE210-484A-42CE-801F-F28ADC856CE4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F53D451-6001-449A-A3E8-DEB5A6832C9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F53D451-6001-449A-A3E8-DEB5A6832C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F53D451-6001-449A-A3E8-DEB5A6832C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F53D451-6001-449A-A3E8-DEB5A6832C9D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7D9447DA-6083-4EBD-9BAB-918E54A0722F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7D9447DA-6083-4EBD-9BAB-918E54A0722F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D9447DA-6083-4EBD-9BAB-918E54A0722F}.Release|Any CPU.ActiveCfg = Release|Any CPU

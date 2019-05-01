@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace KanbanBoard.Model
 {
-    class Task : BaseEntity
+    public class TodoTask : BaseEntity
     {
-        public Task()
+        public TodoTask()
         {
             IsFinished = false;
             IsDeleted = false;
@@ -16,6 +16,9 @@ namespace KanbanBoard.Model
         public Guid TaskID { get; set; }
         public Guid BoardID { get; set; }
         public string Name { get; set; }
+        public bool Urgency { get; set; }
+        public bool Importance { get; set; }
+
 
     }
 }

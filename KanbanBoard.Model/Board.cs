@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace KanbanBoard.Model
 {
-    class Board : BaseEntity
+    public class Board : BaseEntity
     {
-        public Guid BoarID { get; set; }
+        public Guid BoardID { get; set; }
         public string Name { get; set; }
     }
 }

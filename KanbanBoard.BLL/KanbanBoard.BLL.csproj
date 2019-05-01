@@ -43,5 +43,19 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KanbanBoard.CustomException\KanbanBoard.CustomException.csproj">
+      <Project>{6173a7e3-4cfa-4f9b-98d3-05494655e77b}</Project>
+      <Name>KanbanBoard.CustomException</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KanbanBoard.DAL\KanbanBoard.DAL.csproj">
+      <Project>{7f1de210-484a-42ce-801f-f28adc856ce4}</Project>
+      <Name>KanbanBoard.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KanbanBoard.Model\KanbanBoard.Model.csproj">
+      <Project>{7d9447da-6083-4ebd-9bab-918e54a0722f}</Project>
+      <Name>KanbanBoard.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

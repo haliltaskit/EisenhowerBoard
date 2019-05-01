@@ -134,5 +134,15 @@
   <ItemGroup>
     <None Include="Resources\icons8_ok_32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KanbanBoard.BLL\KanbanBoard.BLL.csproj">
+      <Project>{9ef2487d-b9ed-4c0b-91b5-bc6f14cb4c58}</Project>
+      <Name>KanbanBoard.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KanbanBoard.Model\KanbanBoard.Model.csproj">
+      <Project>{7d9447da-6083-4ebd-9bab-918e54a0722f}</Project>
+      <Name>KanbanBoard.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
