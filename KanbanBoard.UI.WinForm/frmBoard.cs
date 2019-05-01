@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace KanbanBoard.UI.WinForm
 {
-    public partial class frmMain : Form
+    public partial class frmBoard : Form
     {
-        public frmMain()
+        public frmBoard()
         {
             InitializeComponent();
+        }
+
+        private void FrmBoard_Load(object sender, EventArgs e)
+        {
+            this.Text = "Bu board'dan gelecek";
         }
     }
 }
