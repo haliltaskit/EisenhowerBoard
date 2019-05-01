@@ -30,10 +30,10 @@
         {
             this.pnlflowCanbans = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.list = new System.Windows.Forms.PictureBox();
+            this.btnList = new System.Windows.Forms.PictureBox();
             this.picAdd = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.list)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAdd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,15 +57,15 @@
             this.label1.Text = "Board List";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // list
+            // btnList
             // 
-            this.list.Image = global::KanbanBoard.UI.WinForm.Properties.Resources.icons8_list_32;
-            this.list.Location = new System.Drawing.Point(736, 73);
-            this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(32, 32);
-            this.list.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.list.TabIndex = 1;
-            this.list.TabStop = false;
+            this.btnList.Image = global::KanbanBoard.UI.WinForm.Properties.Resources.icons8_list_32;
+            this.btnList.Location = new System.Drawing.Point(736, 73);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(32, 32);
+            this.btnList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnList.TabIndex = 1;
+            this.btnList.TabStop = false;
             // 
             // picAdd
             // 
@@ -76,7 +76,7 @@
             this.picAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAdd.TabIndex = 0;
             this.picAdd.TabStop = false;
-            this.picAdd.Click += new System.EventHandler(this.Add_Click);
+            this.picAdd.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // label2
             // 
@@ -95,14 +95,15 @@
             this.ClientSize = new System.Drawing.Size(800, 611);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.list);
+            this.Controls.Add(this.btnList);
             this.Controls.Add(this.picAdd);
             this.Controls.Add(this.pnlflowCanbans);
             this.Name = "frmMain";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kanban Board";
-            ((System.ComponentModel.ISupportInitialize)(this.list)).EndInit();
+            this.Load += new System.EventHandler(this.FrmMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btnList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,7 +114,7 @@
 
         private System.Windows.Forms.FlowLayoutPanel pnlflowCanbans;
         private System.Windows.Forms.PictureBox picAdd;
-        private System.Windows.Forms.PictureBox list;
+        private System.Windows.Forms.PictureBox btnList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

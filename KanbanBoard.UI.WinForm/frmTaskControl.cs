@@ -1,4 +1,6 @@
-﻿using System;
+﻿using KanbanBoard.BLL;
+using KanbanBoard.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,14 @@ namespace KanbanBoard.UI.WinForm
 {
     public partial class frmTaskControl : Form
     {
+        TodoTask task;
+        BoardController _boardController;
+        TodoTaskController _todoTaskController;
         public frmTaskControl()
         {
             InitializeComponent();
-        }
-
-        private void FrmTaskControl_Load(object sender, EventArgs e)
-        {
-
+            _boardController = new BoardController();
+            _todoTaskController = new TodoTaskController();
         }
     }
 }

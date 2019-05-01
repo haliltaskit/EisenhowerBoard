@@ -77,8 +77,6 @@ namespace KanbanBoard.DAL
             reader.Read();
             currentBoard.BoardID = boardID;
             currentBoard.Name = reader["Name"].ToString();
-            currentBoard.IsFinished = (bool)reader["IsFinished"];
-            currentBoard.IsDeleted = (bool)reader["IsDeleted"];
             currentBoard.CreatedDate = (DateTime)reader["CreatedDate"];
             reader.Close();
             return currentBoard;
@@ -96,8 +94,6 @@ namespace KanbanBoard.DAL
                 currentBoard = new Board();
                 currentBoard.BoardID = (Guid)reader["BoardID"];
                 currentBoard.Name = reader["Name"].ToString();
-                currentBoard.IsFinished = (bool)reader["IsFinished"];
-                currentBoard.IsDeleted = (bool)reader["IsDeleted"];
                 currentBoard.CreatedDate = (DateTime)reader["CreatedDate"];
                 boards.Add(currentBoard);
             }

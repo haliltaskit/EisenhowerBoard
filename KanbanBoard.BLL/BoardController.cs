@@ -38,7 +38,10 @@ namespace KanbanBoard.BLL
         {
             return _boardManagement.GetBoardByID(boardID);
         }
-
+        public Board GetBoard(string boardName)
+        {
+            return _boardManagement.GetBoardByName(boardName);
+        }
         public List<Board> GetBoards()
         {
             return _boardManagement.GetAllBoards();

@@ -120,6 +120,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Task Menu";
+            this.Load += new System.EventHandler(this.FrmTask_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

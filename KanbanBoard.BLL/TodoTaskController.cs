@@ -39,7 +39,7 @@ namespace KanbanBoard.BLL
             return _taskManagement.Update(task) > 0;
         }
 
-        public TodoTask GetNote(Guid taskID)
+        public TodoTask GetTask(Guid taskID)
         {
             return _taskManagement.GetTaskByID(taskID);
         }
@@ -49,12 +49,25 @@ namespace KanbanBoard.BLL
             return _taskManagement.GetAllTasks();
         }
 
+        public List<TodoTask> GetListByBoard(string boardName)
+        {
+            List<TodoTask> todoTasks = new List<TodoTask>();
+            foreach (TodoTask item in _taskManagement.GetAllTasks())
+            {
+                if (item.Name.Trim() == boardName.Trim()) //&& !item.IsDeleted && !item.IsFinished
+                {
+                    todoTasks.Add(item);
+                }
+            }
+            return todoTasks;
+        }
+
         public List<TodoTask> GetListByBoard(Guid boardID)
         {
             List<TodoTask> todoTasks = new List<TodoTask>();
             foreach (TodoTask item in _taskManagement.GetAllTasks())
             {
-                if (item.BoardID==boardID && !item.IsDeleted && !item.IsFinished)
+                if (boardID == item.BoardID && !item.IsDeleted && !item.IsFinished) 
                 {
                     todoTasks.Add(item);
                 }

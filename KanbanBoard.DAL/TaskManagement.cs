@@ -96,7 +96,7 @@ namespace KanbanBoard.DAL
         {
             List<TodoTask> tasks = new List<TodoTask>();
             TodoTask currentTask = null;
-            string query = "SELECT * FROM Note";
+            string query = "SELECT * FROM TodoTask";
 
             SqlDataReader reader = h.MyExecuteReader(query);
             while (reader.Read())
