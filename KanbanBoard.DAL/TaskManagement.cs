@@ -62,7 +62,6 @@ namespace KanbanBoard.DAL
                     Value = taskID
                 }
             });
-
             return h.MyExecuteQuery(query);
         }
 

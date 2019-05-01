@@ -43,7 +43,6 @@ namespace KanbanBoard.DAL
                 {
                     ParameterName = "@boardID",
                     Value = boardID
-
                 }
             });
 
@@ -95,7 +94,7 @@ namespace KanbanBoard.DAL
             while (reader.Read())
             {
                 currentBoard = new Board();
-                currentBoard.BoardID = (Guid) reader["BoardID"];
+                currentBoard.BoardID = (Guid)reader["BoardID"];
                 currentBoard.Name = reader["Name"].ToString();
                 currentBoard.IsFinished = (bool)reader["IsFinished"];
                 currentBoard.IsDeleted = (bool)reader["IsDeleted"];
