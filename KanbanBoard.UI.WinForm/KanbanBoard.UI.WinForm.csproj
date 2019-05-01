@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBoardControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBoardControl.Designer.cs">
+      <DependentUpon>frmBoardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTask.Designer.cs">
+      <DependentUpon>frmTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,13 +70,28 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTaskControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaskControl.Designer.cs">
+      <DependentUpon>frmTaskControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBoard.resx">
       <DependentUpon>frmBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBoardControl.resx">
+      <DependentUpon>frmBoardControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTask.resx">
+      <DependentUpon>frmTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaskControl.resx">
+      <DependentUpon>frmTaskControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -97,6 +124,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_add_white_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_update_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ok_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

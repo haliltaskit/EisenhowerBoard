@@ -36,37 +36,53 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnAddTask = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddTask)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlFocus
             // 
+            this.pnlFocus.AllowDrop = true;
+            this.pnlFocus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
             this.pnlFocus.Location = new System.Drawing.Point(50, 50);
             this.pnlFocus.Name = "pnlFocus";
             this.pnlFocus.Size = new System.Drawing.Size(250, 250);
             this.pnlFocus.TabIndex = 0;
+            this.pnlFocus.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pnl_DragDrop);
+            this.pnlFocus.DragOver += new System.Windows.Forms.DragEventHandler(this.pnl_DragOver);
             // 
             // pnlSchedule
             // 
+            this.pnlSchedule.AllowDrop = true;
+            this.pnlSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(213)))));
             this.pnlSchedule.Location = new System.Drawing.Point(350, 50);
             this.pnlSchedule.Name = "pnlSchedule";
             this.pnlSchedule.Size = new System.Drawing.Size(250, 250);
             this.pnlSchedule.TabIndex = 0;
+            this.pnlSchedule.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pnl_DragDrop);
+            this.pnlSchedule.DragOver += new System.Windows.Forms.DragEventHandler(this.pnl_DragOver);
             // 
             // pnlDelegate
             // 
+            this.pnlDelegate.AllowDrop = true;
+            this.pnlDelegate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(28)))));
             this.pnlDelegate.Location = new System.Drawing.Point(50, 350);
             this.pnlDelegate.Name = "pnlDelegate";
             this.pnlDelegate.Size = new System.Drawing.Size(250, 250);
             this.pnlDelegate.TabIndex = 1;
+            this.pnlDelegate.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pnl_DragDrop);
+            this.pnlDelegate.DragOver += new System.Windows.Forms.DragEventHandler(this.pnl_DragOver);
             // 
             // pnlEliminate
             // 
+            this.pnlEliminate.AllowDrop = true;
+            this.pnlEliminate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(196)))), ((int)(((byte)(182)))));
             this.pnlEliminate.Location = new System.Drawing.Point(350, 350);
             this.pnlEliminate.Name = "pnlEliminate";
             this.pnlEliminate.Size = new System.Drawing.Size(250, 250);
             this.pnlEliminate.TabIndex = 2;
+            this.pnlEliminate.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pnl_DragDrop);
+            this.pnlEliminate.DragOver += new System.Windows.Forms.DragEventHandler(this.pnl_DragOver);
             // 
             // label1
             // 
@@ -112,22 +128,23 @@
             this.label4.Text = "ɴᴏᴛ ɪᴍᴘᴏʀᴛᴀɴᴛ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // btnAddTask
             // 
-            this.pictureBox1.Image = global::KanbanBoard.UI.WinForm.Properties.Resources.icons8_add_32;
-            this.pictureBox1.Location = new System.Drawing.Point(310, 309);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.btnAddTask.Image = global::KanbanBoard.UI.WinForm.Properties.Resources.icons8_add_32;
+            this.btnAddTask.Location = new System.Drawing.Point(310, 309);
+            this.btnAddTask.Name = "btnAddTask";
+            this.btnAddTask.Size = new System.Drawing.Size(30, 30);
+            this.btnAddTask.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAddTask.TabIndex = 7;
+            this.btnAddTask.TabStop = false;
+            this.btnAddTask.Click += new System.EventHandler(this.BtnAddTask_Click);
             // 
             // frmBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 677);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -140,7 +157,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmBoard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddTask)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -155,6 +172,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnAddTask;
     }
 }

@@ -21,8 +21,14 @@ namespace KanbanBoard.UI.WinForm
         Panel card;
         private void Add_Click(object sender, EventArgs e)
         {
+            frmBoardControl frm = new frmBoardControl();
+            frm.ShowDialog();
+            AddBoard();
+        }
 
-            Panel card = new Panel
+        void AddBoard()
+        {
+            card = new Panel
             {
                 BackColor = Color.FromArgb(28, 144, 160),
                 Margin = new Padding(50, 5, 5, 50),
@@ -38,18 +44,18 @@ namespace KanbanBoard.UI.WinForm
                 TextAlign = ContentAlignment.MiddleCenter,
                 ForeColor = Color.White,
                 Dock = DockStyle.Top,
-                Font = new Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular)
+                Font = new Font("Trebuchet MS", 8.25F, FontStyle.Regular)
             };
             var lblBoardStatus = new Label
             {
-                Text = "Status",
+                Text = String.Format("{0}/{1} Completed","2","8"),
                 AutoSize = false,
                 Margin = new Padding(3, 15, 0, 0),
                 Size = new Size(100, 30),
                 TextAlign = ContentAlignment.MiddleCenter,
                 ForeColor = Color.White,
                 Dock = DockStyle.Top,
-                Font = new Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular)
+                Font = new Font("Trebuchet MS", 8.25F, FontStyle.Regular)
             };
             var btnOpen = new PictureBox
             {
@@ -76,7 +82,7 @@ namespace KanbanBoard.UI.WinForm
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            PictureBox btn = sender as PictureBox;
+            //PictureBox btn = sender as PictureBox;
             frmBoard frm = new frmBoard();
             frm.ShowDialog();
         }
