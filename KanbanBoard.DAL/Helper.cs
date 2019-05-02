@@ -48,9 +48,13 @@ namespace KanbanBoard.DAL
         public SqlDataReader MyExecuteReader(string query)
         {
             cmd.CommandText = query;
-            conn.Open();
+            if (conn.State==System.Data.ConnectionState.Closed)
+            {
+                conn.Open();
+            }
             SqlDataReader reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
             return reader;
+            
         }
     }
 }

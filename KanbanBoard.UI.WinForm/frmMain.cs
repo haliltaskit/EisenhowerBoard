@@ -32,7 +32,7 @@ namespace KanbanBoard.UI.WinForm
         }
         private void BoardOpen_Click(object sender, EventArgs e)
         {
-            var btn= sender as PictureBox;
+            var btn = sender as PictureBox;
             frmBoard frm = new frmBoard();
             frm.Text = btn.Text.ToString();
             frm.Tag = btn.Tag;
@@ -65,7 +65,8 @@ namespace KanbanBoard.UI.WinForm
                 };
                 var lblBoardStatus = new Label
                 {
-                    Text = string.Format("{0}/{1} Completed", "2", "8"),
+                    Text = string.Format("{0}/{1} Completed", _todoTaskController.GetCountByBoard(item.BoardID, true).ToString(),
+                    _todoTaskController.GetCountByBoard(item.BoardID, false).ToString()),
                     AutoSize = false,
                     Margin = new Padding(3, 15, 0, 0),
                     Size = new Size(100, 30),
@@ -99,6 +100,10 @@ namespace KanbanBoard.UI.WinForm
             RefreshBoard();
         }
 
+        private void BtnList_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

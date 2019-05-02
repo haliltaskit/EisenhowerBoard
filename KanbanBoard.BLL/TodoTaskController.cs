@@ -75,6 +75,11 @@ namespace KanbanBoard.BLL
             return todoTasks;
         }
 
+        public int GetCountByBoard(Guid boardID,bool completeStatus)
+        {
+            return  _taskManagement.GetCountByBoardID(boardID, completeStatus);
+            
+        }
 
 
 

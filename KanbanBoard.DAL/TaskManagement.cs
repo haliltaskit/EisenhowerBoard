@@ -116,6 +116,39 @@ namespace KanbanBoard.DAL
             return tasks;
         }
 
+        public int GetCountByBoardID(Guid boardID, bool status)
+        {
+            string query = "";
+            if (status == true)
+            {
+                query = "Select Count(*) from TodoTask where BoardID=@boardID and IsFinished=@status";
+
+            }
+            else
+            {
+                query = "Select Count(*) from TodoTask where BoardID =@boardID and IsDeleted=@status";
+            } // Ya deleted ya finished olur. 
+            h.AddParametersToCommand(new List<SqlParameter>()
+            {
+                new SqlParameter()
+                {
+                    ParameterName = "@boardID",
+                    Value = boardID
+                },
+                new SqlParameter()
+                {
+                    ParameterName="@status",
+                    Value=status
+                },
+
+            });
+            SqlDataReader reader = h.MyExecuteReader(query);
+            reader.Read();
+            int count = (int)reader[0];
+            reader.Close();
+            return count;
+        }
+
 
 
 

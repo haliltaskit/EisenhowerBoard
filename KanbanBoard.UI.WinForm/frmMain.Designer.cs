@@ -66,6 +66,7 @@
             this.btnList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnList.TabIndex = 1;
             this.btnList.TabStop = false;
+            this.btnList.Click += new System.EventHandler(this.BtnList_Click);
             // 
             // picAdd
             // 
