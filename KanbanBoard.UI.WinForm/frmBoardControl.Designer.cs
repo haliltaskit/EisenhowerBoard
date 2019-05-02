@@ -39,7 +39,7 @@
             this.txtBoard.Multiline = true;
             this.txtBoard.Name = "txtBoard";
             this.txtBoard.Size = new System.Drawing.Size(184, 31);
-            this.txtBoard.TabIndex = 9;
+            this.txtBoard.TabIndex = 0;
             // 
             // label1
             // 
@@ -55,7 +55,7 @@
             this.btnAddBoard.Location = new System.Drawing.Point(200, 104);
             this.btnAddBoard.Name = "btnAddBoard";
             this.btnAddBoard.Size = new System.Drawing.Size(75, 23);
-            this.btnAddBoard.TabIndex = 7;
+            this.btnAddBoard.TabIndex = 1;
             this.btnAddBoard.Text = "Ekle";
             this.btnAddBoard.UseVisualStyleBackColor = true;
             this.btnAddBoard.Click += new System.EventHandler(this.BtnAddTask_Click);

@@ -58,7 +58,7 @@
             this.pnlSchedule.Location = new System.Drawing.Point(350, 50);
             this.pnlSchedule.Name = "pnlSchedule";
             this.pnlSchedule.Size = new System.Drawing.Size(250, 250);
-            this.pnlSchedule.TabIndex = 0;
+            this.pnlSchedule.TabIndex = 1;
             this.pnlSchedule.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pnl_DragDrop);
             this.pnlSchedule.DragOver += new System.Windows.Forms.DragEventHandler(this.pnl_DragOver);
             // 
@@ -69,7 +69,7 @@
             this.pnlDelegate.Location = new System.Drawing.Point(50, 350);
             this.pnlDelegate.Name = "pnlDelegate";
             this.pnlDelegate.Size = new System.Drawing.Size(250, 250);
-            this.pnlDelegate.TabIndex = 1;
+            this.pnlDelegate.TabIndex = 3;
             this.pnlDelegate.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pnl_DragDrop);
             this.pnlDelegate.DragOver += new System.Windows.Forms.DragEventHandler(this.pnl_DragOver);
             // 

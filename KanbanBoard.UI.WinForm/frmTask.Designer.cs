@@ -42,7 +42,7 @@
             this.btnAddTask.Location = new System.Drawing.Point(172, 207);
             this.btnAddTask.Name = "btnAddTask";
             this.btnAddTask.Size = new System.Drawing.Size(75, 23);
-            this.btnAddTask.TabIndex = 0;
+            this.btnAddTask.TabIndex = 3;
             this.btnAddTask.Text = "Ekle";
             this.btnAddTask.UseVisualStyleBackColor = true;
             this.btnAddTask.Click += new System.EventHandler(this.BtnAddTask_Click);
@@ -53,7 +53,7 @@
             this.label1.Location = new System.Drawing.Point(12, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Task";
             // 
             // txtTask
@@ -62,7 +62,7 @@
             this.txtTask.Multiline = true;
             this.txtTask.Name = "txtTask";
             this.txtTask.Size = new System.Drawing.Size(184, 70);
-            this.txtTask.TabIndex = 2;
+            this.txtTask.TabIndex = 0;
             // 
             // cmbUrgency
             // 
@@ -73,7 +73,7 @@
             this.cmbUrgency.Location = new System.Drawing.Point(123, 148);
             this.cmbUrgency.Name = "cmbUrgency";
             this.cmbUrgency.Size = new System.Drawing.Size(121, 21);
-            this.cmbUrgency.TabIndex = 3;
+            this.cmbUrgency.TabIndex = 2;
             // 
             // cmbImportance
             // 
@@ -84,7 +84,7 @@
             this.cmbImportance.Location = new System.Drawing.Point(123, 107);
             this.cmbImportance.Name = "cmbImportance";
             this.cmbImportance.Size = new System.Drawing.Size(121, 21);
-            this.cmbImportance.TabIndex = 4;
+            this.cmbImportance.TabIndex = 1;
             // 
             // label2
             // 
@@ -106,6 +106,7 @@
             // 
             // frmTask
             // 
+            this.AcceptButton = this.btnAddTask;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(259, 272);

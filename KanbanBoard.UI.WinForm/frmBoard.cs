@@ -134,7 +134,7 @@ namespace KanbanBoard.UI.WinForm
                     task.Importance = false;
                     task.Urgency = true;
                     break;
-                case "pnlTerminate":
+                case "pnlEliminate":
                     task.Importance = false;
                     task.Urgency = false;
                     break;

@@ -44,7 +44,7 @@
             this.txtTask.Multiline = true;
             this.txtTask.Name = "txtTask";
             this.txtTask.Size = new System.Drawing.Size(184, 45);
-            this.txtTask.TabIndex = 11;
+            this.txtTask.TabIndex = 1;
             // 
             // label1
             // 
