@@ -89,6 +89,7 @@ namespace KanbanBoard.UI.WinForm
                 frm.Tag = lbl.Tag;
                 frm.ShowDialog();
             }
+            FillTask();
         }
 
         private void Pnl_DragDrop(object sender, DragEventArgs e)

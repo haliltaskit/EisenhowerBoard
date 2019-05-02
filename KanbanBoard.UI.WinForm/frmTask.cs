@@ -15,7 +15,6 @@ namespace KanbanBoard.UI.WinForm
     public partial class frmTask : Form
     {
         TodoTask task;
-        BoardController _boardController;
         TodoTaskController _todoTaskController;
         public frmTask()
         {
