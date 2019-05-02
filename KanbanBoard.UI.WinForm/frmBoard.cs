@@ -15,28 +15,17 @@ namespace KanbanBoard.UI.WinForm
     public partial class frmBoard : Form
     {
         TodoTask task;
-        BoardController _boardController;
         TodoTaskController _todoTaskController;
         public frmBoard()
         {
             InitializeComponent();
-            _boardController = new BoardController();
             _todoTaskController = new TodoTaskController();
-
-            //btnAddTask.MouseDown += Lbl_MouseDown;
         }
 
         private void FrmBoard_Load(object sender, EventArgs e)
         {
-            btnAddTask.Tag = Tag;
             FillTask();
         }
-
-        private void BtnAddTask_DragDrop(object sender, DragEventArgs e)
-        {
-            MessageBox.Show("1");
-        }
-
         private void FillTask()
         {
             foreach (Control item in Controls)
@@ -61,6 +50,7 @@ namespace KanbanBoard.UI.WinForm
                     Dock = DockStyle.Top,
                     Font = new Font("Trebuchet MS", 8.25F, FontStyle.Regular)
                 };
+                lblTask.MouseDown += LblTask_Click;
                 if (item.Importance)
                 {
                     if (item.Urgency)
@@ -83,28 +73,32 @@ namespace KanbanBoard.UI.WinForm
                         pnlEliminate.Controls.Add(lblTask);
                     }
                 }
-                lblTask.DoubleClick += LblTask_DoubleClick;
             }
         }
 
-        private void LblTask_DoubleClick(object sender, EventArgs e)
+        private void LblTask_Click(object sender, MouseEventArgs e)
         {
-            frmTaskControl frm = new frmTaskControl();
-            frm.ShowDialog();
+            Label lbl = sender as Label;
+            if (e.Button != MouseButtons.Right)
+            {
+                lbl.DoDragDrop(sender, DragDropEffects.Move);
+            }
+            else
+            {
+                frmTaskControl frm = new frmTaskControl();
+                frm.Tag = lbl.Tag;
+                frm.ShowDialog();
+            }
         }
-
-        //private void Lbl_MouseDown(object sender, MouseEventArgs e)
-        //{
-        //    Label lbl = sender as Label;
-        //    lbl.DoDragDrop(sender, DragDropEffects.Move);
-        //}
-
 
         private void Pnl_DragDrop(object sender, DragEventArgs e)
         {
             Label lbl = e.Data.GetData(typeof(Label)) as Label;
             Panel pnl = sender as Panel;
-
+            task = new TodoTask();
+            task = _todoTaskController.GetTask((Guid)lbl.Tag);
+            ChangeStatus(pnl);
+            _todoTaskController.Update(task);
             lbl.Parent.Controls.Remove(lbl);
             pnl.Controls.Add(lbl);
         }
@@ -121,6 +115,31 @@ namespace KanbanBoard.UI.WinForm
             frm.Tag = Tag;
             frm.ShowDialog();
             FillTask();
+        }
+
+        private void ChangeStatus(Panel p)
+        {
+            switch (p.Name)
+            {
+                case "pnlFocus":
+                    task.Importance = true;
+                    task.Urgency = true;
+                    break;
+                case "pnlSchedule":
+                    task.Importance = true;
+                    task.Urgency = false;
+                    break;
+                case "pnlDelegate":
+                    task.Importance = false;
+                    task.Urgency = true;
+                    break;
+                case "pnlTerminate":
+                    task.Importance = false;
+                    task.Urgency = false;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

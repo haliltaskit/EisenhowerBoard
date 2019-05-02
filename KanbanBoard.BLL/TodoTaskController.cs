@@ -54,7 +54,7 @@ namespace KanbanBoard.BLL
             List<TodoTask> todoTasks = new List<TodoTask>();
             foreach (TodoTask item in _taskManagement.GetAllTasks())
             {
-                if (item.Name.Trim() == boardName.Trim()) //&& !item.IsDeleted && !item.IsFinished
+                if (item.Name.Trim() == boardName.Trim() && !item.IsDeleted && !item.IsFinished)
                 {
                     todoTasks.Add(item);
                 }
